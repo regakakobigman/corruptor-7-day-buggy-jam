@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/manor.ogg-56c66ec45cc4e1e59039c2c3ff20c3cb.oggstr"
+
+[deps]
+
+source_file="res://praise kevin macleod/manor.ogg"
+dest_files=[ "res://.import/manor.ogg-56c66ec45cc4e1e59039c2c3ff20c3cb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

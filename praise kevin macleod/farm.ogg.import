@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/farm.ogg-e5ee5d564490175513c32805fa2a2b5a.oggstr"
+
+[deps]
+
+source_file="res://praise kevin macleod/farm.ogg"
+dest_files=[ "res://.import/farm.ogg-e5ee5d564490175513c32805fa2a2b5a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

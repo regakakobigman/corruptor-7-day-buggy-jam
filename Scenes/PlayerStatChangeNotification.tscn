@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/Hack-Bold.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Fade"
+length = 2.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.2 ),
+"transitions": PoolRealArray( -0.5, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -50 ), Vector2( 0, -250 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.8, 2.2 ),
+"transitions": PoolRealArray( 2, 0.5, 1, 0.5 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[node name="PlayerStatChangeNotification" type="CenterContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = -100.0
+margin_right = 40.0
+margin_bottom = -60.0
+use_top_left = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = -105.0
+margin_top = -19.0
+margin_right = 104.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 1 )
+text = "WalkSpeed--"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Fade"
+anims/Fade = SubResource( 2 )

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/317485__doty21__long-glitch-4.wav-33a8760f5699c1fdc4cd44299f8ca631.sample"
+
+[deps]
+
+source_file="res://praise freesound/317485__doty21__long-glitch-4.wav"
+dest_files=[ "res://.import/317485__doty21__long-glitch-4.wav-33a8760f5699c1fdc4cd44299f8ca631.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

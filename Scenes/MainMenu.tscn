@@ -1,0 +1,443 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/logo-back.png" type="Texture" id=2]
+[ext_resource path="res://Assets/logo-shadow.png" type="Texture" id=3]
+[ext_resource path="res://Assets/logo.png" type="Texture" id=4]
+[ext_resource path="res://Assets/button_back.png" type="Texture" id=5]
+[ext_resource path="res://Styleboxes/MainMenuStartBoxHover.tres" type="StyleBox" id=6]
+[ext_resource path="res://Styleboxes/MainMenuStartBoxPressed.tres" type="StyleBox" id=7]
+[ext_resource path="res://Styleboxes/MainMenuStartBoxNorm.tres" type="StyleBox" id=8]
+[ext_resource path="res://Fonts/Hack-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Assets/button_shadow.png" type="Texture" id=10]
+[ext_resource path="res://Assets/button_text.png" type="Texture" id=11]
+[ext_resource path="res://Fonts/Hack-Bold.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Fonts/Hack-Italic.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Assets/settings.png" type="Texture" id=14]
+[ext_resource path="res://Assets/goodoot.png" type="Texture" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 26
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 13 )
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_top = 256.0
+margin_right = 20.0
+margin_bottom = 296.0
+use_top_left = true
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+margin_left = -575.0
+margin_top = -275.0
+margin_right = 575.0
+margin_bottom = 275.0
+texture = ExtResource( 2 )
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+margin_left = -575.0
+margin_top = -275.0
+margin_right = 575.0
+margin_bottom = 275.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+margin_left = -500.0
+margin_top = -200.0
+margin_right = 500.0
+margin_bottom = 200.0
+texture = ExtResource( 4 )
+
+[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer"]
+editor/display_folded = true
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -192.0
+margin_top = -144.0
+margin_right = 192.0
+margin_bottom = -102.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/CenterContainer2"]
+margin_left = 192.0
+margin_top = 33.0
+margin_right = 192.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer2/CenterContainer"]
+margin_left = -114.0
+margin_top = -74.0
+margin_right = 114.0
+margin_bottom = 74.0
+mouse_filter = 2
+texture = ExtResource( 5 )
+
+[node name="Button" type="Button" parent="CanvasLayer/CenterContainer2"]
+margin_left = 117.0
+margin_right = 267.0
+margin_bottom = 66.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 8 )
+custom_styles/normal = ExtResource( 8 )
+custom_fonts/font = SubResource( 1 )
+enabled_focus_mode = 0
+
+[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer/CenterContainer2"]
+margin_left = 192.0
+margin_top = 33.0
+margin_right = 192.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = true
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/CenterContainer2/CenterContainer2"]
+margin_left = -114.0
+margin_top = -74.0
+margin_right = 114.0
+margin_bottom = 74.0
+mouse_filter = 2
+texture = ExtResource( 10 )
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer2/CenterContainer2"]
+margin_left = -114.0
+margin_top = -74.0
+margin_right = 114.0
+margin_bottom = 74.0
+mouse_filter = 2
+texture = ExtResource( 11 )
+
+[node name="SelectScreen" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/SelectScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SelectScreen/CenterContainer"]
+margin_left = 578.0
+margin_top = 171.0
+margin_right = 702.0
+margin_bottom = 548.0
+custom_constants/separation = 75
+
+[node name="Level1Button" type="Button" parent="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer"]
+margin_right = 124.0
+margin_bottom = 38.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "Level 1"
+
+[node name="Level1Label" type="Label" parent="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer/Level1Button"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -42.0
+margin_top = 2.0
+margin_right = 42.0
+margin_bottom = 16.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "High Score: :("
+align = 1
+
+[node name="Level2Button" type="Button" parent="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer"]
+margin_top = 113.0
+margin_right = 124.0
+margin_bottom = 151.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "Level 2"
+
+[node name="Level2Label" type="Label" parent="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer/Level2Button"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -42.0
+margin_top = 2.0
+margin_right = 42.0
+margin_bottom = 16.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "High Score: :("
+align = 1
+
+[node name="Level3Button" type="Button" parent="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer"]
+margin_top = 226.0
+margin_right = 124.0
+margin_bottom = 264.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "Level 3"
+
+[node name="Level3Label" type="Label" parent="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer/Level3Button"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -42.0
+margin_top = 2.0
+margin_right = 42.0
+margin_bottom = 16.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "High Score: :("
+align = 1
+
+[node name="Level4Button2" type="Button" parent="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer"]
+margin_top = 339.0
+margin_right = 124.0
+margin_bottom = 377.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "Level 4"
+
+[node name="Level4Label" type="Label" parent="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer/Level4Button2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -42.0
+margin_top = 2.0
+margin_right = 42.0
+margin_bottom = 16.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "High Score: :("
+align = 1
+
+[node name="SettingsButton" type="Button" parent="CanvasLayer"]
+editor/display_folded = true
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -204.0
+margin_top = -134.0
+icon = ExtResource( 14 )
+align = 2
+
+[node name="PC" type="PanelContainer" parent="CanvasLayer/SettingsButton"]
+anchor_right = 1.0
+margin_top = -240.0
+
+[node name="C" type="Control" parent="CanvasLayer/SettingsButton/PC"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 197.0
+margin_bottom = 233.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CoolLabel" type="Label" parent="CanvasLayer/SettingsButton/PC/C"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -31.0
+margin_right = 10.0
+text = "Powered by
+Godot"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/SettingsButton/PC/C"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 12.5
+margin_top = -40.0
+margin_right = 61.5
+texture = ExtResource( 15 )
+
+[node name="VBC" type="VBoxContainer" parent="CanvasLayer/SettingsButton/PC"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 197.0
+margin_bottom = 233.0
+custom_constants/separation = 15
+
+[node name="HBC" type="HBoxContainer" parent="CanvasLayer/SettingsButton/PC/VBC"]
+margin_right = 190.0
+margin_bottom = 47.0
+custom_constants/separation = -19
+
+[node name="VBC" type="VBoxContainer" parent="CanvasLayer/SettingsButton/PC/VBC/HBC"]
+margin_right = 76.0
+margin_bottom = 47.0
+custom_constants/separation = -7
+
+[node name="Label" type="Label" parent="CanvasLayer/SettingsButton/PC/VBC/HBC/VBC"]
+margin_right = 76.0
+margin_bottom = 14.0
+text = "Music"
+align = 1
+
+[node name="MusicCheckButton" type="CheckButton" parent="CanvasLayer/SettingsButton/PC/VBC/HBC/VBC"]
+margin_top = 7.0
+margin_right = 76.0
+margin_bottom = 47.0
+focus_mode = 0
+pressed = true
+enabled_focus_mode = 0
+
+[node name="VBC2" type="VBoxContainer" parent="CanvasLayer/SettingsButton/PC/VBC/HBC"]
+margin_left = 57.0
+margin_right = 133.0
+margin_bottom = 47.0
+custom_constants/separation = -7
+
+[node name="Label" type="Label" parent="CanvasLayer/SettingsButton/PC/VBC/HBC/VBC2"]
+margin_right = 76.0
+margin_bottom = 14.0
+text = "Clock"
+align = 1
+
+[node name="ClockCheckButton" type="CheckButton" parent="CanvasLayer/SettingsButton/PC/VBC/HBC/VBC2"]
+margin_top = 7.0
+margin_right = 76.0
+margin_bottom = 47.0
+focus_mode = 0
+pressed = true
+enabled_focus_mode = 0
+
+[node name="VBC3" type="VBoxContainer" parent="CanvasLayer/SettingsButton/PC/VBC/HBC"]
+margin_left = 114.0
+margin_right = 190.0
+margin_bottom = 47.0
+custom_constants/separation = -7
+
+[node name="Label" type="Label" parent="CanvasLayer/SettingsButton/PC/VBC/HBC/VBC3"]
+margin_right = 76.0
+margin_bottom = 14.0
+text = "SFX"
+align = 1
+
+[node name="SFXCheckButton" type="CheckButton" parent="CanvasLayer/SettingsButton/PC/VBC/HBC/VBC3"]
+margin_top = 7.0
+margin_right = 76.0
+margin_bottom = 47.0
+focus_mode = 0
+pressed = true
+enabled_focus_mode = 0
+
+[node name="MusicVolume" type="Label" parent="CanvasLayer/SettingsButton/PC/VBC"]
+margin_top = 62.0
+margin_right = 190.0
+margin_bottom = 76.0
+text = "Music Volume"
+
+[node name="MusicHSlider" type="HSlider" parent="CanvasLayer/SettingsButton/PC/VBC/MusicVolume"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -8.0
+margin_bottom = 8.0
+value = 50.0
+ticks_on_borders = true
+
+[node name="ClockVolume" type="Label" parent="CanvasLayer/SettingsButton/PC/VBC"]
+margin_top = 91.0
+margin_right = 190.0
+margin_bottom = 105.0
+text = "Clock Volume"
+
+[node name="ClockHSlider" type="HSlider" parent="CanvasLayer/SettingsButton/PC/VBC/ClockVolume"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -8.0
+margin_bottom = 8.0
+value = 50.0
+ticks_on_borders = false
+
+[node name="SFXVolume" type="Label" parent="CanvasLayer/SettingsButton/PC/VBC"]
+margin_top = 120.0
+margin_right = 190.0
+margin_bottom = 134.0
+text = "SFX Volume"
+
+[node name="SFXHSlider" type="HSlider" parent="CanvasLayer/SettingsButton/PC/VBC/SFXVolume"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -8.0
+margin_bottom = 8.0
+value = 50.0
+ticks_on_borders = true
+
+[node name="Tween" type="Tween" parent="CanvasLayer"]
+
+[node name="TitleTween" type="Tween" parent="CanvasLayer"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer2/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer/Level1Button" to="." method="_on_Level1Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer/Level2Button" to="." method="_on_Level2Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer/Level3Button" to="." method="_on_Level3Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/SelectScreen/CenterContainer/VBoxContainer/Level4Button2" to="." method="_on_Level4Button2_pressed"]
+[connection signal="pressed" from="CanvasLayer/SettingsButton" to="." method="_on_SettingsButton_pressed"]
+[connection signal="toggled" from="CanvasLayer/SettingsButton/PC/VBC/HBC/VBC/MusicCheckButton" to="." method="_on_MusicCheckButton_toggled"]
+[connection signal="toggled" from="CanvasLayer/SettingsButton/PC/VBC/HBC/VBC2/ClockCheckButton" to="." method="_on_ClockCheckButton_toggled"]
+[connection signal="toggled" from="CanvasLayer/SettingsButton/PC/VBC/HBC/VBC3/SFXCheckButton" to="." method="_on_SFXCheckButton_toggled"]
+[connection signal="value_changed" from="CanvasLayer/SettingsButton/PC/VBC/MusicVolume/MusicHSlider" to="." method="_on_MusicHSlider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/SettingsButton/PC/VBC/ClockVolume/ClockHSlider" to="." method="_on_ClockHSlider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/SettingsButton/PC/VBC/SFXVolume/SFXHSlider" to="." method="_on_SFXHSlider_value_changed"]

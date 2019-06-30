@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/160052__jorickhoofd__metal-short-tick.wav-6dc6ed2ca12d69337b788f242042d66b.sample"
+
+[deps]
+
+source_file="res://praise freesound/160052__jorickhoofd__metal-short-tick.wav"
+dest_files=[ "res://.import/160052__jorickhoofd__metal-short-tick.wav-6dc6ed2ca12d69337b788f242042d66b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

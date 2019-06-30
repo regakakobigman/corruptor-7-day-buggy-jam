@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://praise kenney/platformer-pack-redux-360-assets/spritesheet_complete.png" type="Texture" id=1]
+
+[node name="PlatformerSheetSprite" type="Sprite" groups=[
+"Corruptable",
+"CorruptableSheetSprite",
+]]
+texture = ExtResource( 1 )
+vframes = 15
+hframes = 27
+frame = 12
+region_enabled = true
+region_rect = Rect2( -1, -1, 3510, 1950 )

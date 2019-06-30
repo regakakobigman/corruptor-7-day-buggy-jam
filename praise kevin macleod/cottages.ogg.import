@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cottages.ogg-6e3697f4334c90f79fb3f94c20b6882f.oggstr"
+
+[deps]
+
+source_file="res://praise kevin macleod/cottages.ogg"
+dest_files=[ "res://.import/cottages.ogg-6e3697f4334c90f79fb3f94c20b6882f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

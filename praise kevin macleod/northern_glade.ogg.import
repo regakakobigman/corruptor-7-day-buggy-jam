@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/northern_glade.ogg-fa24a47fd7479c969797a14b88870575.oggstr"
+
+[deps]
+
+source_file="res://praise kevin macleod/northern_glade.ogg"
+dest_files=[ "res://.import/northern_glade.ogg-fa24a47fd7479c969797a14b88870575.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
